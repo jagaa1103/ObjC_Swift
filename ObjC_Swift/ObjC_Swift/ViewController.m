@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ObjC_Swift-Bridging-Header.h"
 
 @interface ViewController ()
 
@@ -25,5 +26,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)clickedSwiftBtn:(id)sender {
+    UIViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"SwiftView"];
+    [self presentViewController:view animated:true completion:nil];
+}
 
 @end
